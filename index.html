@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kit Lounge - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f7fafc;
+            color: #1a2330;
+        }
+        nav {
+            background: #232a36;
+            padding: 14px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #f6f7fa;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            font-size: 1.06em;
+            letter-spacing: 0.05em;
+            transition: color 0.18s;
+        }
+        nav a:hover {
+            color: #30d2b9;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 48px 10px 32px 10px;
+        }
+        .hero-img {
+            width: 370px;
+            max-width: 97vw;
+            border-radius: 18px;
+            box-shadow: 0 3px 18px rgba(44,62,80,0.07);
+            margin-bottom: 34px;
+            object-fit: cover;
+            background: #fff;
+        }
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a2330;
+            text-align: center;
+        }
+        .hero-sub {
+            font-size: 1.15rem;
+            color: #339c99;
+            font-weight: 500;
+            margin-bottom: 22px;
+            text-align: center;
+        }
+        .hero-desc {
+            font-size: 1.09rem;
+            max-width: 420px;
+            text-align: center;
+            margin-bottom: 24px;
+            color: #425269;
+        }
+        .info-section {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            background: #eef4f7;
+            border-radius: 10px;
+            padding: 28px 24px 18px 24px;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(30,60,100,0.04);
+        }
+        .info-section h2 {
+            font-size: 1.18rem;
+            margin-bottom: 10px;
+            color: #1a2330;
+            font-weight: 600;
+        }
+        .info-section ul {
+            margin: 0 0 0 0.8em;
+            padding: 0;
+        }
+        .info-section li {
+            margin-bottom: 0.7em;
+        }
+        .community-note {
+            text-align: center;
+            color: #1a2330;
+            font-size: 1.07em;
+            margin: 32px auto 0 auto;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .hero-img {
+                width: 98vw;
+            }
+            .info-section, .hero-desc {
+                padding: 0 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="kits.html">Kits</a>
+        <a href="materials.html">Materials</a>
+        <a href="trending.html">Trending</a>
+        <a href="community.html">Community</a>
+        <a href="support.html">Support</a>
+    </nav>
+    <main>
+        <section class="hero">
+            <img src="image1" alt="Person collaborating with robots" class="hero-img">
+            <div class="hero-title">Kit Lounge</div>
+            <div class="hero-sub">Where code, creativity, and hands-on building meet.</div>
+            <div class="hero-desc">
+                A community for hobbyists, makers, and future engineers.<br>
+                Share your projects, learn from others, and turn ideas into real things—together.
+            </div>
+        </section>
+        <section class="info-section">
+            <h2>What you'll find here:</h2>
+            <ul>
+                <li><strong>Kits</strong>: DIY projects and guides from real creators</li>
+                <li><strong>Materials</strong>: Starter toolboxes and essentials</li>
+                <li><strong>Trending</strong>: This month's top community builds</li>
+                <li><strong>Community</strong>: Connect, ask, and share ideas</li>
+                <li><strong>Support</strong>: Help, resources, and inspiration</li>
+            </ul>
+        </section>
+        <div class="community-note">
+            If you love building, tinkering, or learning by doing,<br>
+            <b>Kit Lounge is your home.</b>
+        </div>
+    </main>
+</body>
+</html>
