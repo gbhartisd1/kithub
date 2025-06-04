@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .section-wrap {
-            max-width: 600px;
+            max-width: 700px;
             margin: 40px auto;
             background: #f7fafc;
             border-radius: 12px;
@@ -17,17 +17,51 @@
             color: #1a2330;
         }
         .kits-list {
-            margin: 0 0 0 0.6em;
+            margin: 0;
             padding: 0;
             list-style: none;
         }
-        .kits-list li {
-            margin-bottom: 1.3em;
-            padding-bottom: 0.6em;
+        .kit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 1.7em;
+            padding-bottom: 0.7em;
             border-bottom: 1px solid #e6eef2;
         }
+        .kit-img {
+            width: 105px;
+            height: 105px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #e6eef2;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+            flex-shrink: 0;
+        }
+        .kit-details {
+            flex: 1;
+        }
+        .kit-title {
+            font-weight: bold;
+            font-size: 1.10em;
+        }
         .creator {
-            color: #339c99; font-size: 0.98em;
+            color: #339c99;
+            font-size: 0.98em;
+            margin-bottom: 2px;
+        }
+        @media (max-width: 600px) {
+            .kit-item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .kit-img {
+                width: 98vw;
+                max-width: 220px;
+                height: auto;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -47,30 +81,45 @@
                 Discover DIY kits from inventive creators in our community. Try a project or get inspired to design your own!
             </p>
             <ul class="kits-list">
-                <li>
-                    <strong>Arduino Starter Kit</strong>
-                    <div class="creator">by Tony the Tiger</div>
-                    <div>Everything you need to start building electronics, from blinking LEDs to sensors and motors.</div>
+                <li class="kit-item">
+                    <img src="images/arduino-kit.jpg" alt="Arduino Starter Kit" class="kit-img">
+                    <div class="kit-details">
+                        <div class="kit-title">Arduino Starter Kit</div>
+                        <div class="creator">by Tony the Tiger</div>
+                        <div>Everything you need to start building electronics, from blinking LEDs to sensors and motors.</div>
+                    </div>
                 </li>
-                <li>
-                    <strong>Desk Organizer Kit</strong>
-                    <div class="creator">by Cheyenne the Dude</div>
-                    <div>Assemble your own wooden desk organizer—perfect for makers who love a tidy workspace.</div>
+                <li class="kit-item">
+                    <img src="images/desk-organizer.jpg" alt="Desk Organizer Kit" class="kit-img">
+                    <div class="kit-details">
+                        <div class="kit-title">Desk Organizer Kit</div>
+                        <div class="creator">by Cheyenne the Dude</div>
+                        <div>Assemble your own wooden desk organizer—perfect for makers who love a tidy workspace.</div>
+                    </div>
                 </li>
-                <li>
-                    <strong>Wearable LED Kit</strong>
-                    <div class="creator">by Trisha Peytas</div>
-                    <div>Make a glowing accessory or badge using flexible LEDs and easy instructions.</div>
+                <li class="kit-item">
+                    <img src="images/wearable-led.jpg" alt="Wearable LED Kit" class="kit-img">
+                    <div class="kit-details">
+                        <div class="kit-title">Wearable LED Kit</div>
+                        <div class="creator">by Trisha Peytas</div>
+                        <div>Make a glowing accessory or badge using flexible LEDs and easy instructions.</div>
+                    </div>
                 </li>
-                <li>
-                    <strong>Mini Greenhouse Kit</strong>
-                    <div class="creator">by Sara Sprout</div>
-                    <div>Build a tabletop greenhouse for herbs or seedlings, great for windowsills.</div>
+                <li class="kit-item">
+                    <img src="images/mini-greenhouse.jpg" alt="Mini Greenhouse Kit" class="kit-img">
+                    <div class="kit-details">
+                        <div class="kit-title">Mini Greenhouse Kit</div>
+                        <div class="creator">by Sara Sprout</div>
+                        <div>Build a tabletop greenhouse for herbs or seedlings, great for windowsills.</div>
+                    </div>
                 </li>
-                <li>
-                    <strong>Robot Car Kit</strong>
-                    <div class="creator">by Leo Byte</div>
-                    <div>Construct and program a small robot car—learn the basics of robotics and coding.</div>
+                <li class="kit-item">
+                    <img src="images/robot-car.jpg" alt="Robot Car Kit" class="kit-img">
+                    <div class="kit-details">
+                        <div class="kit-title">Robot Car Kit</div>
+                        <div class="creator">by Leo Byte</div>
+                        <div>Construct and program a small robot car—learn the basics of robotics and coding.</div>
+                    </div>
                 </li>
             </ul>
         </div>
