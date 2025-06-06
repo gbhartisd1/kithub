@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Builds - Kit Lounge</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .builds-list { max-width: 900px; margin: 2em auto; }
+    .build-card {
+      display: flex; gap: 18px; margin-bottom: 2em; background: #f8fafc;
+      border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 20px;
+      align-items: flex-start;
+    }
+    .build-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; background: #e6eef2; }
+    .build-info { flex: 1; }
+    .creator { color: #339c99; font-size: 1em; margin-bottom: 2px; }
+    .attributes { font-size: .93em; color: #8a8a8a; margin-bottom: 8px; }
+    .stars { color: #f5c518; margin-right: 8px; }
+    .build-title { font-size: 1.2em; font-weight: bold; margin-bottom: 4px; }
+    .bill { font-size: .95em; margin-top: 6px; color: #2d2d2d; }
+    .forum-link { display: inline-block; margin-top: 8px; color: #1a72e7; text-decoration: underline; font-size: .95em; }
+    .reviews { font-size: .93em; color: #555; margin-left: 6px; }
+    .notes { background: #fffbe9; border-left: 4px solid #ffe066; padding: 10px 18px; margin: 2em 0; border-radius: 8px; color: #695900;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="kitsandmaterials.html">Kits & Materials</a>
+    <a href="builds.html">Builds</a>
+    <a href="postbuild.html">Post a Build</a>
+  </nav>
+  <main>
+    <h1 style="text-align:center;">Community Builds</h1>
+
+    <!-- Cofounder Vision Notes -->
+    <section class="notes">
+      <strong>Notes for Backend Implementation:</strong>
+      <ul>
+        <li>Each build is an object in the database with fields: title, creator, photo, attributes (tags), ranking (average stars, # of reviews), bill of materials (array), description, and forum/comments (array or thread).</li>
+        <li>This static page demonstrates the frontend layout. Replace static data with dynamic content from the database.</li>
+        <li>Each build card should be clickable or have a “View & Discuss” link that leads to a detailed build page with full description and forum.</li>
+        <li>Ranking is an average of user-submitted star ratings. Reviews count is total ratings submitted.</li>
+        <li>Attributes are tags users can select when posting a build (e.g., fun, useful, creative, challenging).</li>
+        <li>Bill of materials should be an array/object in the backend; displayed as a bulleted list.</li>
+        <li>Forum is a thread per build, storing comments/replies. This can be a separate page or modal.</li>
+        <li>Images are uploaded and stored with the build object, with a URL to display here.</li>
+      </ul>
+    </section>
+
+    <div class="builds-list">
+      <!-- Example Build Card -->
+      <div class="build-card">
+        <img src="images/samplebuild.jpg" alt="LED Matrix Clock" class="build-img">
+        <div class="build-info">
+          <div class="build-title">LED Matrix Clock</div>
+          <div class="creator">by Alex Maker</div>
+          <div>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(23 reviews)</span>
+          </div>
+          <div class="attributes">fun, creative, useful</div>
+          <div class="bill">
+            <strong>Bill of Materials:</strong>
+            <ul>
+              <li>LED Matrix</li>
+              <li>Arduino Nano</li>
+              <li>RTC Module</li>
+              <li>Jumper wires</li>
+              <li>3D printed case</li>
+            </ul>
+          </div>
+          <a href="build-details.html?id=1" class="forum-link">View & Discuss →</a>
+        </div>
+      </div>
+
+      <!-- Another Example Build Card -->
+      <div class="build-card">
+        <img src="images/plantbot.jpg" alt="Plant Watering Robot" class="build-img">
+        <div class="build-info">
+          <div class="build-title">Plant Watering Robot</div>
+          <div class="creator">by Robin Green</div>
+          <div>
+            <span class="stars">★★★☆☆</span>
+            <span class="reviews">(9 reviews)</span>
+          </div>
+          <div class="attributes">useful, challenging</div>
+          <div class="bill">
+            <strong>Bill of Materials:</strong>
+            <ul>
+              <li>ESP8266 Board</li>
+              <li>Mini water pump</li>
+              <li>Moisture sensor</li>
+              <li>Relay module</li>
+            </ul>
+          </div>
+          <a href="build-details.html?id=2" class="forum-link">View & Discuss →</a>
+        </div>
+      </div>
+
+      <!-- Add more build-card blocks as needed for mockup -->
+    </div>
+  </main>
+</body>
+</html>
