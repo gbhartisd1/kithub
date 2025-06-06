@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kits & Materials - Kit Lounge</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-flex {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .section-wrap {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 10px rgba(44,62,80,0.05);
+            flex: 1;
+            min-width: 0; /* helps with overflow on smaller screens */
+        }
+        h1, h2 {
+            color: #1a2330;
+        }
+        /* Kits styles */
+        .kits-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .kit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 1.7em;
+            padding-bottom: 0.7em;
+            border-bottom: 1px solid #e6eef2;
+        }
+        .kit-img {
+            width: 105px;
+            height: 105px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #e6eef2;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+            flex-shrink: 0;
+        }
+        .kit-details {
+            flex: 1;
+        }
+        .kit-title {
+            font-weight: bold;
+            font-size: 1.10em;
+        }
+        /* Materials styles */
+        .materials-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .materials-list li {
+            margin-bottom: 1.2em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e6eef2;
+        }
+        .creator {
+            color: #339c99; font-size: 0.98em;
+        }
+        /* Responsive for Mobile */
+        @media (max-width: 900px) {
+            .main-flex {
+                flex-direction: column;
+                gap: 0;
+            }
+            .kit-item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .kit-img {
+                width: 98vw;
+                max-width: 220px;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="kits.html">Kits</a>
+        <a href="materials.html">Materials</a>
+        <a href="trending.html">Trending</a>
+        <a href="community.html">Community</a>
+        <a href="support.html">Support</a>
+    </nav>
+    <main>
+        <h1 style="text-align:center; margin-top:30px;">Project Kits & Materials</h1>
+        <div class="main-flex">
+            <!-- Kits Section -->
+            <div class="section-wrap">
+                <h2>Kits</h2>
+                <p>
+                    Discover DIY kits from inventive creators in our community. Try a project or get inspired to design your own!
+                </p>
+                <ul class="kits-list">
+                    <li class="kit-item">
+                        <img src="images/arduinokit.jpg" alt="Arduino Starter Kit" class="kit-img">
+                        <div class="kit-details">
+                            <div class="kit-title">Arduino Starter Kit</div>
+                            <div class="creator">by Tony the Tiger</div>
+                            <div>Everything you need to start building electronics, from blinking LEDs to sensors and motors.</div>
+                        </div>
+                    </li>
+                    <li class="kit-item">
+                        <img src="images/deskkit.jpg" alt="Desk Organizer Kit" class="kit-img">
+                        <div class="kit-details">
+                            <div class="kit-title">Desk Organizer Kit</div>
+                            <div class="creator">by Cheyenne the Dude</div>
+                            <div>Assemble your own wooden desk organizer—perfect for makers who love a tidy workspace.</div>
+                        </div>
+                    </li>
+                    <li class="kit-item">
+                        <img src="images/ledkit.jpg" alt="Wearable LED Kit" class="kit-img">
+                        <div class="kit-details">
+                            <div class="kit-title">Wearable LED Kit</div>
+                            <div class="creator">by Trisha Peytas</div>
+                            <div>Make a glowing accessory or badge using flexible LEDs and easy instructions.</div>
+                        </div>
+                    </li>
+                    <li class="kit-item">
+                        <img src="images/greenhousekit.jpg" alt="Mini Greenhouse Kit" class="kit-img">
+                        <div class="kit-details">
+                            <div class="kit-title">Mini Greenhouse Kit</div>
+                            <div class="creator">by Sara Sprout</div>
+                            <div>Build a tabletop greenhouse for herbs or seedlings, great for windowsills.</div>
+                        </div>
+                    </li>
+                    <li class="kit-item">
+                        <img src="images/carkit.jpg" alt="Robot Car Kit" class="kit-img">
+                        <div class="kit-details">
+                            <div class="kit-title">Robot Car Kit</div>
+                            <div class="creator">by Leo Byte</div>
+                            <div>Construct and program a small robot car—learn the basics of robotics and coding.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Materials Section -->
+            <div class="section-wrap">
+                <h2>Materials & Toolboxes</h2>
+                <p>
+                    Find the core tools and starter materials recommended by fellow builders.
+                </p>
+                <ul class="materials-list">
+                    <li>
+                        <strong>Precision Screwdriver Set</strong>
+                        <div class="creator">curated by Cheyenne the Dude</div>
+                        <div>Tackle tiny screws on electronics, toys, and gadgets with this essential set.</div>
+                    </li>
+                    <li>
+                        <strong>Breadboard & Jumper Wires</strong>
+                        <div class="creator">curated by Tony the Tiger</div>
+                        <div>Prototype circuits and test ideas—no soldering required.</div>
+                    </li>
+                    <li>
+                        <strong>Mini Hot Glue Gun</strong>
+                        <div class="creator">curated by Trisha Peytas</div>
+                        <div>For quick fixes, crafts, and creative assembly work.</div>
+                    </li>
+                    <li>
+                        <strong>Craft Knife</strong>
+                        <div class="creator">curated by Sara Sprout</div>
+                        <div>Perfect for precision cutting in model making and paper crafts.</div>
+                    </li>
+                    <li>
+                        <strong>Alligator Clips</strong>
+                        <div class="creator">curated by Leo Byte</div>
+                        <div>Great for making temporary connections and testing circuits.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
