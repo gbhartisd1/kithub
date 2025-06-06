@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post a Build</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      max-width: 600px;
+      margin: 2em auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px #ddd;
+    }
+    h1 {
+      color: #2d6cdf;
+      margin-bottom: 0.5em;
+    }
+    .hint {
+      background: #f0f8ff;
+      border-left: 4px solid #2d6cdf;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      font-size: 1em;
+      color: #444;
+      border-radius: 6px;
+    }
+    form label {
+      display: block;
+      margin: 1em 0 0.3em;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    form button {
+      background: #2d6cdf;
+      color: #fff;
+      border: none;
+      padding: 0.8em 2em;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    form button:hover {
+      background: #174a98;
+    }
+    .dev-notes {
+      background: #fffbe8;
+      border: 1px dashed #ffd700;
+      color: #6d5500;
+      padding: 1em;
+      margin-top: 2em;
+      border-radius: 8px;
+    }
+    .dev-notes h2 {
+      margin-top: 0;
+      font-size: 1.1em;
+      color: #b89c00;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin-bottom: 2em;
+    }
+    nav a {
+      margin-right: 1em;
+      color: #2d6cdf;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="kitsandmaterials.html">Kits & Materials</a>
+    <a href="builds.html">Builds</a>
+    <a href="postbuild.html">Post a Build</a>
+  </nav>
+
+  <main>
+    <h1>Post a Build</h1>
+    <div class="hint">
+      <strong>Share your creativity!</strong><br>
+      Fill out the form below to tell the community about your latest project. Add as much detail as you like—photos, instructions, and parts lists are welcome!
+    </div>
+    <form>
+      <label for="title">Build Title</label>
+      <input type="text" id="title" name="title" placeholder="E.g. Solar-Powered Robot" required>
+      
+      <label for="author">Your Name or Username</label>
+      <input type="text" id="author" name="author" placeholder="E.g. JamieKits">
+      
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="5" placeholder="Describe your build, how it works, and any tips for others." required></textarea>
+      
+      <label for="parts">Parts & Materials (optional)</label>
+      <textarea id="parts" name="parts" rows="3" placeholder="List the main parts, components, or kits used."></textarea>
+      
+      <label for="image">Image URL (optional)</label>
+      <input type="url" id="image" name="image" placeholder="Paste a link to an image of your build.">
+
+      <button type="submit">Submit Build</button>
+    </form>
+    <p style="margin-top:1.5em; color:#888;">Submissions are not saved yet (demo only).</p>
+    
+    <div class="dev-notes">
+      <h2>Developer Notes (for backend integration)</h2>
+      <ul>
+        <li>On submit, POST the form data (title, author, description, parts, image) to the backend endpoint, e.g. <code>/api/builds</code>.</li>
+        <li>Basic validation is in place (required fields). Add further validation as needed.</li>
+        <li>For image uploads, replace the URL field with a file upload input and handle storage appropriately.</li>
+        <li>After successful submission, redirect to the builds page or show a confirmation message.</li>
+        <li>Consider adding authentication for posting.</li>
+        <li>Sanitize all inputs on the backend.</li>
+        <li>Replace the demo-only notice above when backend is ready.</li>
+      </ul>
+      <p><em>Leave this section for developer use only. It won't be visible to users in production.</em></p>
+    </div>
+  </main>
+</body>
+</html>
